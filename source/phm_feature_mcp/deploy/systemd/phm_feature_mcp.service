@@ -1,0 +1,22 @@
+[Unit]
+Description=PHM Feature MCP Server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=chaos
+Group=chaos
+WorkingDirectory=/home/chaos/program/phm_feature_mcp
+EnvironmentFile=/home/chaos/program/phm_feature_mcp/.env
+ExecStart=/home/chaos/program/phm_feature_mcp/.venv/bin/python /home/chaos/program/phm_feature_mcp/run.py
+Restart=always
+RestartSec=3
+TimeoutStopSec=35
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

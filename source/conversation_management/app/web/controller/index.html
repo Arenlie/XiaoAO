@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>对话管理后端控制台</title>
+  <link rel="stylesheet" href="./styles.css?v=1.0.0" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">CM</div>
+        <div><strong>Conversation Manager <small>v1.0.0</small></strong><span>生产接口控制台</span></div>
+      </div>
+      <div class="sidebar-tools">
+        <label for="endpointSearch">查找接口</label>
+        <input id="endpointSearch" type="search" placeholder="名称、路径或功能" />
+      </div>
+      <nav id="sidebarNav" class="sidebar-nav"></nav>
+      <div class="sidebar-footer">
+        <a href="/chat/" target="_blank">打开 Chat</a>
+        <a id="swaggerLink" href="/docs" target="_blank">Swagger</a>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button id="mobileMenuBtn" class="icon-button mobile-only">☰</button>
+        <div class="topbar-title">
+          <h1>对话管理后端控制台</h1>
+          <p>验证三种执行模式、主智能体调度、完整执行历史、Outbox、RLS、Trace 与 SSE。</p>
+        </div>
+        <div class="connection-panel">
+          <div class="field compact"><label>后端地址</label><input id="apiBase" /></div>
+          <div class="field compact"><label>X-User-Token（URL参数）</label><input id="userToken" value="user_10086" /></div>
+          <div class="field compact"><label>Token</label><input id="dataToken" type="password" placeholder="生成接口需要" /></div>
+          <div class="field compact"><label>Controller-Token</label><input id="controllerToken" type="password" placeholder="智能体管理需要" /></div>
+          <div class="connection-actions">
+            <button id="saveSettingsBtn">保存</button>
+            <button id="connectBtn" class="primary">连接检查</button>
+          </div>
+          <div class="connection-state"><span id="connectionDot" class="status-dot idle"></span><span id="connectionText">尚未检查</span></div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="overview" class="panel overview-section">
+          <div class="section-heading">
+            <div><span class="eyebrow">运行总览</span><h2>服务与当前租户状态</h2><p>聚合健康检查、Redis 队列、任务、Outbox、RLS 与 OpenTelemetry 配置。</p></div>
+            <div class="overview-actions"><label class="switch-label"><input id="autoRefreshToggle" type="checkbox" />每 5 秒刷新</label><button id="refreshOverviewBtn" class="primary">刷新状态</button></div>
+          </div>
+          <div id="statusCards" class="status-card-grid"></div>
+          <div class="overview-grid">
+            <article class="summary-panel"><h3>任务状态</h3><div id="taskSummary" class="summary-list empty-state">等待数据</div></article>
+            <article class="summary-panel"><h3>Outbox 状态</h3><div id="outboxSummary" class="summary-list empty-state">等待数据</div></article>
+            <article class="summary-panel"><h3>Redis Stream</h3><div id="redisSummary" class="summary-list empty-state">等待数据</div></article>
+            <article class="summary-panel"><h3>生产能力</h3><div id="featureSummary" class="summary-list empty-state">等待数据</div></article>
+          </div>
+          <details class="raw-details"><summary>查看原始总览响应</summary><pre id="overviewRaw" class="json-output compact-output">等待刷新</pre></details>
+        </section>
+
+        <section id="agent-management" class="panel agent-management-section">
+          <div class="section-heading">
+            <div><span class="eyebrow">LangGraph Agent Registry</span><h2>智能体运行开关</h2><p>控制每个智能体是否启用、是否参与自动路由、是否允许实际执行。AI 诊断接入位默认关闭。</p></div>
+            <button id="refreshAgentsBtn" class="primary">刷新智能体</button>
+          </div>
+          <div id="agentCards" class="agent-card-grid"><div class="empty-state">请输入 Controller-Token 后刷新</div></div>
+        </section>
+
+        <section class="panel context-section">
+          <div class="section-heading compact-heading"><div><span class="eyebrow">公共测试变量</span><h2>接口上下文</h2><p>接口示例中的占位符会使用这里的值。</p></div><button id="applyContextBtn">应用到全部接口</button></div>
+          <div class="context-grid">
+            <label>conversation_id<input id="ctxConversationId" placeholder="UUID" /></label>
+            <label>task_id<input id="ctxTaskId" placeholder="UUID" /></label>
+            <label>user_message_id<input id="ctxUserMessageId" placeholder="UUID" /></label>
+            <label>assistant_message_id<input id="ctxAssistantMessageId" placeholder="UUID" /></label>
+            <label>message_id<input id="ctxMessageId" placeholder="UUID" /></label>
+            <label>branch_id<input id="ctxBranchId" placeholder="UUID" /></label>
+                        <label>agent_id<input id="ctxAgentId" value="dify.industrial_data" /></label>
+            <label>limit<input id="ctxLimit" type="number" value="30" min="1" max="200" /></label>
+          </div>
+        </section>
+
+        <section id="endpointWorkspace" class="endpoint-workspace"></section>
+
+        <section id="custom-request" class="panel custom-section">
+          <div class="section-heading compact-heading"><div><span class="eyebrow">补充工具</span><h2>自定义请求</h2><p>支持普通 JSON 请求及带身份请求头的临时接口测试。</p></div></div>
+          <div class="custom-grid">
+            <div class="input-pane">
+              <label>方法<select id="customMethod"><option>GET</option><option>POST</option><option>PATCH</option><option>DELETE</option><option>PUT</option></select></label>
+              <label>路径<input id="customPath" value="/chat/v1/diagnostics/overview" /></label>
+              <label>查询参数 JSON<textarea id="customQuery">{}</textarea></label>
+              <label>请求体 JSON<textarea id="customBody">{}</textarea></label>
+              <div class="button-row"><button id="sendCustomBtn" class="primary">发送请求</button><button id="copyCustomBtn">复制 curl</button></div>
+            </div>
+            <div class="output-pane"><div class="output-toolbar"><div><strong>响应</strong><span id="customMeta">尚未执行</span></div><button id="clearCustomBtn" class="small">清空</button></div><pre id="customOutput" class="json-output">等待请求</pre></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="./app.js?v=1.0.0"></script>
+</body>
+</html>

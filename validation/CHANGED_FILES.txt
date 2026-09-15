@@ -1,0 +1,25 @@
+Issue1 global asset collection hotfix v1 changed files
+
+conversation_management:
+- app/asset_collection_scope.py (new)
+- app/asset_query_contract.py
+- app/orchestration/asset_query_policy.py
+- app/orchestration/entity_dependency.py
+- app/orchestration/task_instructions.py
+- app/services/asset_collections.py
+- app/tools/phm_asset_context.py
+- tests/test_issue1_global_asset_collection.py (new)
+
+phm_assert_mcp:
+- app/asset_query_contract.py
+- app/mcp/server.py
+- app/services/asset_collection_engine.py
+- tests/test_issue1_global_scope_contract.py (new)
+- tests/test_v150_collection_sql.py
+
+package metadata/docs:
+- upgrade/full_replace.py
+- upgrade/full_replace_manifest.json
+- CODEX_问题1_全局设备集合误解析单设备_最小修复方案.md
+- README_ISSUE1_HOTFIX.md
+- PHM_1.7.0_问题1_Hotfix_部署指令集.md

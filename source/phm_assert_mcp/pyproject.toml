@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phm-asset-mcp"
+version = "1.7.0"
+description = "PHM asset/entity/hierarchy MCP server"
+requires-python = ">=3.12"
+dependencies = [
+  "mcp>=1.12,<2",
+  "asyncpg>=0.30,<1",
+  "httpx>=0.28,<1",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "starlette>=0.45,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "pytest-asyncio>=0.25,<1"]
+
+[project.scripts]
+phm-asset-mcp = "app.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

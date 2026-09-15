@@ -1,0 +1,10 @@
+mcp==2.0.0
+uvicorn>=0.35,<1
+starlette>=0.47,<1
+pydantic-settings>=2.10,<3
+pymongo>=4.10,<5
+redis>=5,<7
+PyMySQL>=1.1,<2
+psycopg[binary,pool]>=3.2,<4
+httpx>=0.28,<1
+python-dotenv>=1.0,<2

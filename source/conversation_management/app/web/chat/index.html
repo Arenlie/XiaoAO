@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="chat-ui-build" content="1.0.0.12" />
+  <title>小奥助手 · 对话管理</title>
+  <link rel="stylesheet" href="./chat-ui-v1.4.1.css" />
+
+  <style id="chat-ui-critical-1.0.0.12">
+    #messageList.message-list{display:block}
+    .conversation-copy{min-width:0;overflow:hidden}
+    .conversation-title,.conversation-preview{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <div class="chat-shell">
+    <aside class="chat-sidebar">
+      <div class="brand-row"><div class="brand-mark">AI</div><div><strong>小奥助手</strong><span>对话管理平台</span></div></div>
+      <button id="newChatBtn" class="new-chat">＋ 新对话</button>
+      <div class="search-box"><input id="conversationSearch" type="search" placeholder="搜索会话" /></div>
+      <div id="conversationList" class="conversation-list"></div>
+      <div class="sidebar-bottom"><a href="/controller/" target="_blank">后端控制台</a><button id="settingsBtn">连接与画像</button></div>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <button id="mobileMenuBtn" class="mobile-menu">☰</button>
+        <div class="conversation-heading"><h1 id="conversationTitle">新对话</h1><div class="heading-meta"><span id="connectionBadge" class="badge neutral">未检查</span><span id="branchBadge" class="badge">ROOT</span><span id="taskBadge" class="badge hidden"></span></div></div>
+        <div class="header-actions"><button id="pinBtn" title="置顶">置顶</button><button id="renameBtn">重命名</button><button id="deleteBtn" class="danger-text">删除</button><button id="traceToggleBtn">过程</button></div>
+      </header>
+
+      <div class="chat-body">
+        <section class="conversation-stage">
+          <div id="emptyState" class="empty-chat">
+            <div class="empty-logo">AI</div><h2>今天要分析什么？</h2>
+            <p>支持快速回答、主智能体调度、专家级逐步核验、附件分析和完整执行历史。</p>
+            <div id="suggestionGrid" class="suggestion-grid"></div>
+          </div>
+          <div id="messageList" class="message-list"></div>
+          <div id="streamNotice" class="stream-notice hidden"></div>
+        </section>
+
+        <aside id="tracePanel" class="trace-panel">
+          <div class="trace-header"><div><strong>执行过程</strong><span id="traceTaskId">尚无任务</span></div><button id="closeTraceBtn">×</button></div>
+          <div id="traceTimeline" class="trace-timeline"><div class="trace-empty">Graph、主智能体、子智能体、工具和文件处理事件将在这里显示。</div></div>
+          <div class="trace-footer"><button id="copyTraceBtn">复制过程</button><button id="clearTraceBtn">清空</button></div>
+        </aside>
+      </div>
+
+      <footer class="composer-wrap">
+        <div class="composer">
+          <div id="pendingAttachments" class="pending-attachments hidden"></div>
+          <textarea id="messageInput" rows="1" placeholder="给小奥助手发送消息，Enter 发送，Shift+Enter 换行"></textarea>
+          <div class="composer-actions">
+            <span id="composerHint">需要配置用户 Token 和数据访问 Token</span>
+            <div class="execution-mode-switch" role="group" aria-label="执行模式">
+              <button id="quickModeBtn" type="button" data-execution-mode="quick">⚡ 快速</button>
+              <button id="normalModeBtn" type="button" class="active" data-execution-mode="normal">◈ 正常</button>
+              <button id="expertModeBtn" type="button" data-execution-mode="expert">🧠 专家</button>
+            </div>
+            <input id="attachmentInput" type="file" multiple hidden accept="image/jpeg,image/png,image/webp,image/gif,application/pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.csv,.tsv,.txt,.md,.json,.yaml,.yml,.log,.py,.js,.ts,.java,.go,.rs,.c,.cpp,.h,.sql" />
+            <span id="asrLiveStatus" class="asr-live-status hidden" aria-live="polite"><i></i><b>正在听...</b></span>
+            <button id="micBtn" class="mic" type="button" title="语音输入：点击开始，再次点击停止" aria-pressed="false">🎙️ 语音</button>
+            <button id="attachBtn" type="button" title="上传图片或文件">📎 附件</button><button id="stopBtn" class="stop hidden">停止</button><button id="sendBtn" class="send">发送</button>
+          </div>
+        </div>
+        <div class="disclaimer">语音输入采用流式 PCM + WebSocket 实时转写，识别文字会边说边更新到输入框；快速模式只调用通用内容分析智能体，正常/专家模式按原逻辑执行。</div>
+      </footer>
+    </main>
+  </div>
+
+  <div id="settingsModal" class="modal-backdrop hidden">
+    <div class="modal-card settings-card">
+      <div class="modal-header"><div><h2>连接与用户上下文</h2><p>配置保存在当前浏览器 localStorage。</p></div><button data-close-modal="settingsModal">×</button></div>
+      <div class="settings-grid">
+        <label>后端地址<input id="apiBase" /></label>
+        <label>X-User-Token<input id="userToken" value="user_10086" /></label>
+        <label>Token<input id="dataToken" type="password" placeholder="业务数据平台 Token" /></label>
+        <label>应用编码<input id="appCode" value="xiaoao" /></label>
+      </div>
+      <label class="profile-label">用户画像 JSON<textarea id="profileJson" spellcheck="false">{}</textarea></label>
+      <div class="modal-actions"><button id="loadProfileBtn">读取画像</button><button id="saveProfileBtn">保存画像</button><span class="spacer"></span><button id="testConnectionBtn">检查连接</button><button id="saveSettingsBtn" class="primary">保存并关闭</button></div>
+    </div>
+  </div>
+
+
+  <div id="entityModal" class="modal-backdrop hidden">
+    <div class="modal-card entity-card">
+      <div class="modal-header">
+        <div><h2>请选择目标实体</h2><p>系统检索到多个相似的区域、设备或测点。选择后原任务将继续执行。</p></div>
+        <button data-close-modal="entityModal" aria-label="关闭">×</button>
+      </div>
+      <div id="entityCandidates" class="entity-candidates"></div>
+      <div class="entity-modal-footer"><span id="entitySelectionExpiry">候选将在一段时间后过期</span></div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="./chat-ui-v1.5.0.js?v=1.4.1"></script>
+</body>
+</html>

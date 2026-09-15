@@ -1,0 +1,139 @@
+{
+  "task_id": "1e617332-9942-4832-a615-608b31f5d3de",
+  "query": "诊断分析一下17架轧机的减速机测点",
+  "classification": {
+    "reason": "用户明确要求对17架轧机的减速机测点做诊断分析，属于测点级专业诊断；未给出时间范围，目标为具体设备下指定部件相关测点。",
+    "confidence": 0.94,
+    "goal_frame": {
+      "goal": "对17架轧机减速机相关测点执行故障诊断分析并给出结论",
+      "operations": [
+        "retrieve",
+        "diagnose",
+        "summarize"
+      ],
+      "output_type": "diagnosis",
+      "evidence_types": [
+        "vibration",
+        "diagnosis_result",
+        "asset"
+      ],
+      "evidence_required": true,
+      "anchor_entity_level": "equipment",
+      "diagnosis_requested": true,
+      "target_entity_level": "point",
+      "can_answer_from_context": false,
+      "target_is_system_output": false,
+      "requested_evidence_types": [],
+      "diagnosis_request_confidence": 0.96
+    },
+    "time_range": {
+      "mode": "none",
+      "end_time": "",
+      "start_time": "",
+      "target_time": "",
+      "source_expression": ""
+    },
+    "variant_id": "point",
+    "workflow_id": "diagnosis_analysis",
+    "routing_status": "matched",
+    "asset_semantics": {
+      "area": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "point": {
+        "raw_text": "减速机测点",
+        "retrieval_text": "减速机测点"
+      },
+      "equip_no": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "point_no": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "position": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "component": {
+        "raw_text": "减速机",
+        "retrieval_text": "减速机"
+      },
+      "direction": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "equipment": {
+        "raw_text": "17架轧机",
+        "retrieval_text": "17架轧机"
+      },
+      "scope_mode": "auto",
+      "measurement": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "equipment_type": {
+        "raw_text": "轧机",
+        "retrieval_text": "轧机"
+      },
+      "scope_expression": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "refresh_requested": false,
+      "collection_filters": [],
+      "explicit_overrides": [],
+      "needs_asset_lookup": true,
+      "collection_requested": false,
+      "descendant_recursive": true,
+      "collection_output_mode": "list",
+      "descendant_target_type": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "reference_target_level": "none",
+      "descendant_target_level": "none",
+      "collection_output_expression": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "descendant_collection_requested": false
+    },
+    "knowledge_bases": [
+      "企业智库",
+      "历史案例库",
+      "硬件部署信息库"
+    ],
+    "knowledge_query": "查询17架轧机减速机测点相关设备结构、测点布置、常见故障模式、维护诊断规程及历史类似案例，用于辅助测点级故障诊断分析。",
+    "semantic_policy": {
+      "scope_mode": "auto",
+      "policy_version": "1.0",
+      "applied_overrides": [],
+      "rejected_overrides": [],
+      "effective_recursive": true,
+      "origin_query_present": false,
+      "scope_expression_raw": "",
+      "pending_merge_applied": false,
+      "collection_output_mode": "list",
+      "descendant_target_level": "none",
+      "recursive_policy_source": "not_descendant_collection"
+    },
+    "time_window_hours": null,
+    "knowledge_required": true,
+    "recipe_recommended": true,
+    "independent_queries": [],
+    "classification_retried": false,
+    "classification_attempts": 1,
+    "recipe_match_confidence": 0.95,
+    "classification_max_attempts": 3
+  },
+  "observed": {
+    "classification_ms": 59506.253,
+    "asset_call_ms": 103.502,
+    "asset_status": "MULTIPLE",
+    "equipment_candidate_count": 6,
+    "error_code": "ENTITY_LEVEL_MISMATCH"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "query": "白灰三车间1#斗提有问题吗？",
+  "classification": {
+    "reason": "用户询问指定设备是否有问题，属于状态评估而非专业故障诊断或健康分解释；需绑定具体设备后查询报警、健康度等客观状态证据。",
+    "confidence": 0.95,
+    "goal_frame": {
+      "goal": "判断白灰三车间1#斗提当前是否存在异常或问题。",
+      "operations": [
+        "retrieve",
+        "assess",
+        "summarize"
+      ],
+      "output_type": "assessment",
+      "evidence_types": [
+        "alarm",
+        "health"
+      ],
+      "evidence_required": true,
+      "anchor_entity_level": "equipment",
+      "diagnosis_requested": false,
+      "target_entity_level": "equipment",
+      "can_answer_from_context": false,
+      "target_is_system_output": false,
+      "requested_evidence_types": [],
+      "diagnosis_request_confidence": 0.95
+    },
+    "time_range": {
+      "mode": "none",
+      "end_time": "",
+      "start_time": "",
+      "target_time": "",
+      "source_expression": ""
+    },
+    "variant_id": "none",
+    "workflow_id": "none",
+    "routing_status": "unmatched",
+    "asset_semantics": {
+      "area": {
+        "raw_text": "白灰三车间",
+        "retrieval_text": "白灰三车间"
+      },
+      "point": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "equip_no": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "point_no": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "position": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "component": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "direction": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "equipment": {
+        "raw_text": "1#斗提",
+        "retrieval_text": "1#斗提"
+      },
+      "scope_mode": "auto",
+      "measurement": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "equipment_type": {
+        "raw_text": "斗提",
+        "retrieval_text": "斗式提升机"
+      },
+      "scope_expression": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "refresh_requested": false,
+      "collection_filters": [],
+      "explicit_overrides": [],
+      "needs_asset_lookup": true,
+      "collection_requested": false,
+      "descendant_recursive": true,
+      "collection_output_mode": "list",
+      "descendant_target_type": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "reference_target_level": "none",
+      "descendant_target_level": "none",
+      "collection_output_expression": {
+        "raw_text": "",
+        "retrieval_text": ""
+      },
+      "descendant_collection_requested": false
+    },
+    "knowledge_bases": [],
+    "knowledge_query": "",
+    "semantic_policy": {
+      "scope_mode": "auto",
+      "policy_version": "1.0",
+      "applied_overrides": [],
+      "rejected_overrides": [],
+      "effective_recursive": true,
+      "origin_query_present": false,
+      "scope_expression_raw": "",
+      "pending_merge_applied": false,
+      "collection_output_mode": "list",
+      "descendant_target_level": "none",
+      "recursive_policy_source": "not_descendant_collection"
+    },
+    "time_window_hours": null,
+    "knowledge_required": false,
+    "recipe_recommended": false,
+    "independent_queries": [],
+    "classification_retried": false,
+    "classification_attempts": 1,
+    "recipe_match_confidence": 0.2,
+    "classification_max_attempts": 3
+  },
+  "asset_error": {
+    "code": "UPSTREAM_ERROR",
+    "operator_message": "resolve_entity: embedding request failed: RuntimeError: Cannot send a request, as the client has been closed.",
+    "public_message": "资产向量模型暂时不可用，请稍后重试。",
+    "retryable": true
+  },
+  "fixture_note": "Classification and error taken from incident 810d98cd. No production credentials or equipment identity included."
+}

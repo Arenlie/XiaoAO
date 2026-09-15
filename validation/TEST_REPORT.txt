@@ -1,0 +1,56 @@
+PHM 1.7.0 Issue1 Global Asset Collection Hotfix v1 - Validation Report
+Date: 2026-09-15
+
+1. Syntax / compile validation
+- conversation_management: python -m compileall -q . : PASS
+- phm_assert_mcp: python -m compileall -q . : PASS
+- phm_data_mcp: python -m compileall -q . : PASS
+- phm_feature_mcp: python -m compileall -q . : PASS
+- phm_diagnosis_mcp: python -m compileall -q . : PASS
+- deploy.sh bash -n: PASS
+- support/collect_task_trace.sh bash -n: PASS
+- support/collect_conversation_trace.sh bash -n: PASS
+- support/verify_evidence_fabric.sh bash -n: PASS
+
+2. Direct hotfix tests
+conversation_management:
+  python -m pytest -q tests/test_issue1_global_asset_collection.py tests/test_asset_category_protocol.py
+  Result: 10 passed
+
+phm_assert_mcp:
+  python -m pytest -q tests/test_issue1_global_scope_contract.py
+  Result: 2 passed
+
+3. Real incident classification replay
+Input classification extracted from conversation debug f68afd79-47f1-40c6-bb2e-f0ce5e1f6501:
+- asset_query.active=true
+- operation=count
+- predicate equipment_class=水泵
+- equipment_type=水泵
+- needs_asset_lookup=true
+
+Result after hotfix:
+- is_unscoped_new_asset_collection=True
+- identity_dependency.required=False
+- identity_dependency.source=shared_catalog_collection
+- generated AssetQuery.scope={scope_type: shared_catalog, target_entity_level: equipment}
+- predicate remains equipment_class=水泵
+PASS
+
+4. Compatibility guard
+Test: “水泵的健康度怎么样？” synthetic structured intent
+Result:
+- asset_query.active=false
+- identity_dependency.required=True
+- identity_dependency.level=equipment
+PASS
+
+5. Optional PostgreSQL integration test
+phm_assert_mcp/tests/test_v150_collection_sql.py::test_shared_catalog_scope_counts_all_catalog_equipment_without_resolving_a_fake_root
+Current build environment: SKIPPED because PHM_TEST_PG_DSN is not configured.
+This test is included in the package and should be run on an explicit disposable PostgreSQL test database if available.
+
+6. Existing broader tests not fully runnable in build sandbox
+- test_v150_asset_and_confirmation.py requires Python redis package not installed in sandbox.
+- test_v130_early_entity.py requires langgraph not installed in sandbox.
+These are environment dependency limitations, not test failures. Run them in the target project's existing .venv if required.

@@ -1,0 +1,672 @@
+{
+  "note": "Observed production response samples, not full lists; original counts retained. Analysis and algorithm data omitted.",
+  "responses": {
+    "active_faults": {
+      "success": true,
+      "data": {
+        "records": [
+          {
+            "id": "FLT-37F2827041399E7EF6E4DD436493E7F4",
+            "equip_num": "BBGPG02010160030041",
+            "point_num": "BBGPG0201016003004101G04VA",
+            "param_num": "BBGPG0201016003004101G04VT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:50:43",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-0CB920C98C32AD23469DE02E4F27E696",
+            "equip_num": "BBGPG01050070150042",
+            "point_num": "BBGPG0105007015004201M02HA",
+            "param_num": "BBGPG0105007015004201M02HA999",
+            "model_type": 1,
+            "model_name": "偏置电压异常",
+            "start_time": "2026-09-02 02:46:56",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "v"
+          },
+          {
+            "id": "FLT-477B74981304FBDE277485842C710C67",
+            "equip_num": "ZG2ZD2LC",
+            "point_num": "ZG2ZD2LC01M08HA",
+            "param_num": "ZG2ZD2LC01M08HT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-08-13 04:30:27",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-89CA4AB73E161751379F57298F687A1B",
+            "equip_num": "BBGPG02010160030041",
+            "point_num": "BBGPG0201016003004101G05AA",
+            "param_num": "BBGPG0201016003004101G05AT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:50:43",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-25168D6B1B072246622E56CA8E097258",
+            "equip_num": "BBGPG02030060060043",
+            "point_num": "BBGPG0203006006004301G03HA",
+            "param_num": "BBGPG0203006006004301G03HT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:50:11",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-B5ADBC5E9D30F6E5F3C3294A68615BDD",
+            "equip_num": "BBGPG01050120040012",
+            "point_num": "BBGPG0105012004001201M02HA",
+            "param_num": "BBGPG0105012004001201M02HT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:47:33",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-6C5B2AF275707A46B51EF646795D9950",
+            "equip_num": "BBGPG02030060080042",
+            "point_num": "BBGPG0203006008004201G05AA",
+            "param_num": "BBGPG0203006008004201G05AT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:46:33",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-30F1D722513BEA0A855862A71756C27E",
+            "equip_num": "BBGPG02010160050044",
+            "point_num": "BBGPG0201016005004401R08HA",
+            "param_num": "BBGPG0201016005004401R08HA999",
+            "model_type": 1,
+            "model_name": "偏置电压异常",
+            "start_time": "2026-09-02 02:46:28",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "v"
+          },
+          {
+            "id": "FLT-BE8A39A2013E06617366C208C44ABEED",
+            "equip_num": "BBGPG02030060100042",
+            "point_num": "BBGPG0203006010004201G06HA",
+            "param_num": "BBGPG0203006010004201G06HT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 02:38:47",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-F82E8DF18240D541C89E726FBB97A32A",
+            "equip_num": "BBGPG02030020040042",
+            "point_num": "BBGPG0203002004004201G06HA",
+            "param_num": "BBGPG0203002004004201G06HA999",
+            "model_type": 1,
+            "model_name": "偏置电压异常",
+            "start_time": "2026-09-02 02:38:44",
+            "end_time": null,
+            "fault_status": "PENDING_CONFIRMATION",
+            "fault_status_name": "正在故障待确认",
+            "status_remark": "正式故障已进入待确认状态，正在等待人工确认。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "v"
+          }
+        ]
+      },
+      "message": "ok"
+    },
+    "history_faults": {
+      "success": true,
+      "data": {
+        "records": [
+          {
+            "id": "FLT-85968DFFE4DC0AAC9E88D0F9A9EED928",
+            "equip_num": "BB1LG1806001",
+            "point_num": "BB1LG180600101G06AA",
+            "param_num": "BB1LG180600101G06AT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-09-02 11:58:30",
+            "end_time": "2026-09-02 12:03:27",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-4C911962263741A678DD927CBEDE3F56",
+            "equip_num": "BB1LG1803004",
+            "point_num": "BB1LG180300401M02AA",
+            "param_num": "BB1LG180300401M02AT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 10:40:36",
+            "end_time": "2026-09-02 11:14:49",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-9D183E7EEAD212013864FA78E55F2156",
+            "equip_num": "QY004001004",
+            "point_num": "QY00400100401G11HA",
+            "param_num": "QY00400100401G11HT000",
+            "model_type": 3,
+            "model_name": "温度异常",
+            "start_time": "2026-09-02 10:31:11",
+            "end_time": "2026-09-02 10:54:12",
+            "fault_status": "DATA_INTERRUPTED",
+            "fault_status_name": "故障后数据中断",
+            "status_remark": "故障发生后监测数据中断，故障已按数据中断结束。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-7F7272744375A72690D0FAB6F628EC26",
+            "equip_num": "BBGPG02030060100042",
+            "point_num": "BBGPG0203006010004201G06HA",
+            "param_num": "BBGPG0203006010004201G06HT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-09-02 10:25:48",
+            "end_time": "2026-09-02 15:07:48",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-CF70FB5F2EA92ED2EAF0965DC1315B5B",
+            "equip_num": "ZG2ZD18ZJ",
+            "point_num": "ZG2ZD18ZJ01M10HA",
+            "param_num": "ZG2ZD18ZJ01M10HA999",
+            "model_type": 1,
+            "model_name": "偏置电压异常",
+            "start_time": "2026-09-02 07:04:34",
+            "end_time": "2026-09-02 09:29:38",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "v"
+          },
+          {
+            "id": "FLT-2D791765EC8186CC50739C8BD3E8768F",
+            "equip_num": "QY004001002002",
+            "point_num": "QY00400100200201F03AA",
+            "param_num": "QY004001002002004001",
+            "model_type": 7,
+            "model_name": "数据毛刺",
+            "start_time": "2026-09-02 06:24:08",
+            "end_time": "2026-09-02 08:09:04",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "m/s²"
+          },
+          {
+            "id": "FLT-152928E757B56C1356033621DD5C6EB7",
+            "equip_num": "QY004003002",
+            "point_num": "QY00400300205G02VA",
+            "param_num": "QY00400300205G02VT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-09-02 05:18:23",
+            "end_time": "2026-09-02 05:45:48",
+            "fault_status": "DATA_INTERRUPTED",
+            "fault_status_name": "故障后数据中断",
+            "status_remark": "故障发生后监测数据中断，故障已按数据中断结束。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-8B7E09673207F733063FDBE20DDD19E0",
+            "equip_num": "QY004002003",
+            "point_num": "QY00400200301G02HA",
+            "param_num": "QY00400200301G02HAWAVE",
+            "model_type": 5,
+            "model_name": "波形削顶",
+            "start_time": "2026-09-01 18:21:40",
+            "end_time": "2026-09-01 18:50:52",
+            "fault_status": "DATA_INTERRUPTED",
+            "fault_status_name": "故障后数据中断",
+            "status_remark": "故障发生后监测数据中断，故障已按数据中断结束。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "m/s²"
+          },
+          {
+            "id": "FLT-A459256D261767856E6FEE5AAD2F6B82",
+            "equip_num": "QY002001002",
+            "point_num": "QY00200100201G36AA",
+            "param_num": "QY00200100201G36AT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-09-02 10:08:36",
+            "end_time": "2026-09-02 19:30:07",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "unit": "℃"
+          },
+          {
+            "id": "FLT-7F7272744375A72690D0FAB6F628EC26",
+            "equip_num": "BBGPG02030060100042",
+            "point_num": "BBGPG0203006010004201G06HA",
+            "param_num": "BBGPG0203006010004201G06HT000",
+            "model_type": 6,
+            "model_name": "数据卡死",
+            "start_time": "2026-09-02 10:06:48",
+            "end_time": "2026-09-02 10:23:48",
+            "fault_status": "AUTO_RECOVERED",
+            "fault_status_name": "故障自动恢复",
+            "status_remark": "该故障后续持续检测中自动恢复正常。",
+            "monitor_status": "ONLINE",
+            "monitor_status_name": "在线监测",
+            "unit": "℃"
+          }
+        ]
+      },
+      "message": "ok"
+    },
+    "rules": {
+      "success": true,
+      "data": {
+        "records": [
+          {
+            "rule_code": "BIAS_VOLTAGE_ABNORMAL",
+            "input": "bias/999 hard gate before all downstream checks",
+            "enabled": true,
+            "thresholds": [
+              7.0,
+              17.0
+            ],
+            "model_type": 1,
+            "model_name": "偏置电压异常"
+          },
+          {
+            "rule_code": "VELOCITY_RMS_ABNORMAL",
+            "input": "velocity/001",
+            "enabled": true,
+            "thresholds": {
+              "low": 0.0,
+              "high": 200.0,
+              "mad_multiplier": 10.0,
+              "min_abs_delta": 20.0
+            },
+            "model_type": 2,
+            "model_name": "速度有效值异常"
+          },
+          {
+            "rule_code": "TEMPERATURE_ABNORMAL",
+            "input": "temperature/000",
+            "enabled": true,
+            "thresholds": {
+              "low": -50.0,
+              "high": 150.0,
+              "mad_multiplier": 10.0,
+              "min_abs_delta": 30.0
+            },
+            "model_type": 3,
+            "model_name": "温度异常"
+          },
+          {
+            "rule_code": "CONSTANT_VALUE",
+            "input": "velocity/001 and temperature/000; bias/999 excluded",
+            "enabled": true,
+            "thresholds": {
+              "epsilon": 0.0,
+              "count_limit": 24
+            },
+            "model_type": 6,
+            "model_name": "数据卡死"
+          },
+          {
+            "rule_code": "SPIKE",
+            "input": "velocity/001 and temperature/000; bias/999 excluded",
+            "enabled": true,
+            "thresholds": {
+              "delta_ratio": 5.0,
+              "consecutive_confirm_count": 5
+            },
+            "model_type": 7,
+            "model_name": "数据毛刺"
+          },
+          {
+            "rule_code": "SKEWNESS_ABNORMAL",
+            "input": "waveform statistics",
+            "enabled": true,
+            "thresholds": {
+              "abs_high": 5.0
+            },
+            "model_type": 4,
+            "model_name": "歪度异常"
+          },
+          {
+            "rule_code": "WAVEFORM_CLIPPING",
+            "input": "waveform statistics",
+            "enabled": true,
+            "thresholds": {
+              "ratio_high": 0.05
+            },
+            "model_type": 5,
+            "model_name": "波形削顶"
+          },
+          {
+            "rule_code": "DATA_MISSING",
+            "input": "logical point freshness",
+            "enabled": false,
+            "thresholds": {
+              "feature_timeout_seconds": 3600,
+              "waveform_timeout_seconds": 14400
+            },
+            "model_type": 0,
+            "model_name": "数据缺失"
+          }
+        ]
+      }
+    },
+    "dashboard_sensors": {
+      "success": true,
+      "data": {
+        "snapshot_time": "2026-09-08 19:05:54",
+        "definition": {
+          "sensor_unit": "A/T合并后的逻辑测点",
+          "healthy": "monitor_status=ONLINE 且没有活动故障",
+          "fault": "monitor_status=ONLINE 且至少存在一个活动故障",
+          "offline_definition": "历史缓存无数据，或最新实际数据时间距当前超过30分钟",
+          "suspended_definition": "离线后暂停诊断；缓存仍继续接收，新鲜数据到达后自动恢复",
+          "simulation_included": false,
+          "current_fault_type_statistics": "当前活动故障口径，不是每日新增报警口径",
+          "daily_alarm_statistics": "按本地自然日start_time统计当天新发布故障；记录数与测点数不可直接相加比较"
+        },
+        "configured_sensor_count": 9086,
+        "offline_sensor_count": 6758,
+        "offline_sensor_list": [
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101F03AA",
+            "point_name": "风机联轴器侧3A",
+            "vibration_point_num": "BB1BC010101500101F03AA",
+            "temperature_point_num": "BB1BC010101500101F03AT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101F03HA",
+            "point_name": "风机联轴器侧3H",
+            "vibration_point_num": "BB1BC010101500101F03HA",
+            "temperature_point_num": "BB1BC010101500101F03HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101F04HA",
+            "point_name": "风机叶轮侧4H",
+            "vibration_point_num": "BB1BC010101500101F04HA",
+            "temperature_point_num": "BB1BC010101500101F04HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101F04VA",
+            "point_name": "风机叶轮侧4V",
+            "vibration_point_num": "BB1BC010101500101F04VA",
+            "temperature_point_num": "BB1BC010101500101F04VT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101M01HA",
+            "point_name": "电机非驱动端1H",
+            "vibration_point_num": "BB1BC010101500101M01HA",
+            "temperature_point_num": "BB1BC010101500101M01HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015001",
+            "point_num": "BB1BC010101500101M02HA",
+            "point_name": "电机驱动端2H",
+            "vibration_point_num": "BB1BC010101500101M02HA",
+            "temperature_point_num": "BB1BC010101500101M02HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015002",
+            "point_num": "BB1BC010101500201F03AA",
+            "point_name": "风机联轴器侧3A",
+            "vibration_point_num": "BB1BC010101500201F03AA",
+            "temperature_point_num": "BB1BC010101500201F03AT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015002",
+            "point_num": "BB1BC010101500201F03HA",
+            "point_name": "风机联轴器侧3H",
+            "vibration_point_num": "BB1BC010101500201F03HA",
+            "temperature_point_num": "BB1BC010101500201F03HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015002",
+            "point_num": "BB1BC010101500201F04HA",
+            "point_name": "风机叶轮侧4H",
+            "vibration_point_num": "BB1BC010101500201F04HA",
+            "temperature_point_num": "BB1BC010101500201F04HT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          },
+          {
+            "equip_num": "BB1BC0101015002",
+            "point_num": "BB1BC010101500201F04VA",
+            "point_name": "风机叶轮侧4V",
+            "vibration_point_num": "BB1BC010101500201F04VA",
+            "temperature_point_num": "BB1BC010101500201F04VT",
+            "point_types": [
+              "加速度",
+              "温度"
+            ],
+            "monitor_status": "SUSPENDED",
+            "monitor_status_name": "离线后暂停诊断",
+            "monitor_status_source": "history_cache_freshness"
+          }
+        ],
+        "monitored_sensor_count": 2328
+      }
+    },
+    "point_state_01": {
+      "success": true,
+      "data": {
+        "point": {
+          "id": 64336,
+          "equip_id": 719,
+          "equip_no": "BB1BC0101015001",
+          "equip_name": "1#鼓风机",
+          "raw_point_no": "BB1BC010101500101F03A",
+          "point_no": "BB1BC010101500101F03AA",
+          "point_name": "风机联轴器侧3A",
+          "point_types": [
+            "加速度",
+            "温度"
+          ],
+          "sort_no": 999,
+          "feature_params": [
+            {
+              "param_code": "BB1BC010101500101F03AT000",
+              "param_name": "轴承温度",
+              "feature_kind": "temperature",
+              "point_no": "BB1BC010101500101F03AT",
+              "suffix": "000",
+              "params_unit": "℃"
+            },
+            {
+              "param_code": "BB1BC003001001005001",
+              "param_name": "JSDYXZ",
+              "feature_kind": "velocity",
+              "point_no": "BB1BC010101500101F03AA",
+              "suffix": "001",
+              "params_unit": "m/s²"
+            },
+            {
+              "param_code": "BB1BC010101500101F03AA001",
+              "param_name": "通频速度有效值",
+              "feature_kind": "velocity",
+              "point_no": "BB1BC010101500101F03AA",
+              "suffix": "001",
+              "params_unit": "mm/s"
+            }
+          ],
+          "waveform_enabled": true,
+          "vibration_point_num": "BB1BC010101500101F03AA",
+          "temperature_point_num": "BB1BC010101500101F03AT",
+          "bias_param_num": "",
+          "velocity_param_num": "BB1BC010101500101F03AA001",
+          "temperature_param_num": "BB1BC010101500101F03AT000",
+          "source_records": [],
+          "monitor_status": "SUSPENDED",
+          "monitor_status_source": "history_cache_freshness"
+        },
+        "monitor_status": "SUSPENDED",
+        "monitor_status_name": "离线后暂停诊断"
+      }
+    },
+    "fault_evidence_01": {
+      "success": true,
+      "data": {
+        "id": "FLT-37F2827041399E7EF6E4DD436493E7F4",
+        "equip_num": "BBGPG02010160030041",
+        "point_num": "BBGPG0201016003004101G04VA",
+        "param_num": "BBGPG0201016003004101G04VT000",
+        "model_type": 3,
+        "model_name": "温度异常",
+        "start_time": "2026-09-02 02:50:43",
+        "end_time": null,
+        "fault_status": "PENDING_CONFIRMATION",
+        "fault_id": "FLT-37F2827041399E7EF6E4DD436493E7F4",
+        "rule_code": "TEMPERATURE_ABNORMAL",
+        "source_type": "REAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Conversation and Attachment Cleanup
+
+[Timer]
+OnCalendar=*-*-* 03:35:00
+Persistent=true
+RandomizedDelaySec=300
+Unit=conversation-data-cleanup.service
+
+[Install]
+WantedBy=timers.target

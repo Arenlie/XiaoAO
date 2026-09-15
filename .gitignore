@@ -1,0 +1,26 @@
+# Python 虚拟环境与缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 前端依赖
+node_modules/
+
+# 运行日志
+logs/
+*.log
+*.log.*
+
+# 常见私钥文件
+*.key
+*.pem
+id_rsa
+id_ed25519
+
+# 操作系统临时文件
+Thumbs.db
+.DS_Store

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Conversation Management Log Cleanup
+
+[Timer]
+OnCalendar=*-*-* 03:20:00
+Persistent=true
+RandomizedDelaySec=300
+Unit=conversation-log-cleanup.service
+
+[Install]
+WantedBy=timers.target
